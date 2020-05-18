@@ -1,8 +1,8 @@
-# MakerDAO Testchain
+# TakerTAO Testchain
 
-This tool will help you set up a local testchain and deploy the contracts you need to work with Maker apps.
+This tool will help you set up a local testchain and deploy the contracts you need to work with Taker apps.
 
-This branch, `dai.js`, is configured with the contracts needed for the [Dai.js](https://github.com/makerdao/dai.js) library.
+This branch, `tao.js`, is configured with the contracts needed for the [Tao.js](https://github.com/cleancoindev/tao.js) library.
 
 ## Installation and requirements
 
@@ -76,10 +76,10 @@ When the deploy script is run, it copies ABI files and output addresses of deplo
 
 Use `scripts/create-snapshot NAME` to copy the contents of `var/chaindata` into a new folder `snapshots/NAME`. Add `--force` if you want to replace an existing snapshot.
 
-## Recipe: rebuilding MCD
+## Recipe: rebuilding MCT
 
 ```
-./scripts/launch -s scd-only --deploy --deploy-mcd-only
+./scripts/launch -s scd-only --deploy --deploy-mct-only
 ```
 
-This starts with a snapshot of all the SCD contracts, and then redeploys all the MCD contracts on top of that snapshot. Edit `scripts/deploy-mcd` to tweak the build parameters or add to it.
+This starts with a snapshot of all the SCT contracts, and then redeploys all the MCT contracts on top of that snapshot. Edit `scripts/deploy-mct` to tweak the build parameters or add to it.
