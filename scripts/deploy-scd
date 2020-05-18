@@ -5,7 +5,7 @@ function sed_inplace {
   sed -i.bak "$1" $2 && rm $2.bak
 }
 
-function write_json_sct {
+function write_json_scd {
   if [ -z "$1" ]; then
     echo "No output file passed. Use write_json path/to/file.json"
     exit 1
@@ -202,7 +202,7 @@ function deploy_scd {
   ############################
 
   mkdir -p $OUT
-  write_json_sct "$OUT/addresses.json"
+  write_json_scd "$OUT/addresses.json"
 
   cp $LIB/maker-otc/out/MatchingMarket.abi \
   $LIB/sai-proxy/out/SaiProxyCreateAndExecute.abi \
