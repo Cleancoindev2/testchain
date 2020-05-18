@@ -49,11 +49,11 @@ function deploy_mct_dds {
     $DDS/out/abi/* \
     $DDS/contracts/tss-deploy/out/*.abi | \
     grep -v -E "(Fab|Dev|Test|Like|t_sol|lib_|src_)" | \
-    xargs sh -c "sudo cp \$@ $OUT/mcd" placeholder
+    xargs sh -c "sudo cp \$@ $OUT/mct" placeholder
   # why the placeholder? see https://en.wikipedia.org/wiki/Xargs#Shell_trick
 
   # sort addresses alphabetically
-  jq -S . $DDS/out/addresses.json > $OUT/addresses-mcd.json
+  jq -S . $DDS/out/addresses.json > $OUT/addresses-mct.json
 
   # all done, go home!
   cd -
